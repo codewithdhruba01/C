@@ -2,12 +2,14 @@
 int main(){
     int cp;
     int sp;
+    double amount;
     printf("Enter Your Cost Price : ");
-    scanf("%f", &cp);
+    scanf("%d", &cp);
      printf("Enter Your Selling Price : ");
-    scanf("%f", &sp);
+    scanf("%d", &sp);
     if( sp>cp) {
-        printf("Your Profit.");
+        amount = sp-cp;
+        printf("Your Profit is %.2f",amount);
     }
         if(sp==cp) {
             printf("No Profit No Loss.");
@@ -15,6 +17,8 @@ int main(){
         // if(cp>sp){
         // printf("Your Profit.");
         else{
-            printf("Your Loss."); 
+            amount = cp-sp;
+            printf("Your Loss is %.2f", amount); 
         }
+        return 0;
     }
